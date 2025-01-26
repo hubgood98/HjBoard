@@ -1,1 +1,5 @@
 rootProject.name = 'HjBoard'
+
+//멀티모듈 구현하려면 include를 작성해야한다.
+
+include 'common','service','service:article','service:comment','service:view','service:hot-article','service:article-read','service:like'
