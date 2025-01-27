@@ -1,11 +1,11 @@
-package hj.board.view;
+package hj.board.article;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LikeApplication {
+public class ViewApplication {
     public static void main(String[] args) {
-        SpringApplication.run(LikeApplication.class, args);
+        SpringApplication.run(ViewApplication.class, args);
     }
 }

@@ -1,11 +1,11 @@
-package hj.board.view;
+package hj.board.article;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CommentApplication {
+public class HotArticleApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CommentApplication.class, args);
+        SpringApplication.run(HotArticleApplication.class, args);
     }
 }
