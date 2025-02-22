@@ -1,8 +1,6 @@
 package hj.board.article.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,6 +15,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Article {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long articleId;
     private String title;
     private String content;
