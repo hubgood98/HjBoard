@@ -5,7 +5,7 @@ spring:
     name: HjBoard-article-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/article?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: jdbc:mysql://127.0.0.1:3306/article
     username: root
     password: 1234
   jpa:
@@ -13,11 +13,10 @@ spring:
     open-in-view: false
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
 
 logging:
   level:
     root: DEBUG
-    org.hibernate.SQL: DEBUG
-    org.springframework: DEBUG
-
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
