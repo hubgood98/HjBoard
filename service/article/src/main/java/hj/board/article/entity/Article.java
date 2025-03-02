@@ -1,6 +1,8 @@
 package hj.board.article.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,14 +10,13 @@ import lombok.ToString;
 
 import java.time.LocalDateTime;
 
-@Table(name="article")
+@Table(name = "article")
+@Getter
 @Entity
 @ToString
-@Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Article {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long articleId;
     private String title;
     private String content;
@@ -36,9 +37,10 @@ public class Article {
         return article;
     }
 
-    public void update(String title, String content){
+    public void update(String title, String content) {
         this.title = title;
         this.content = content;
         modifiedAt = LocalDateTime.now();
     }
+
 }
