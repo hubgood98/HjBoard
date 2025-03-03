@@ -27,6 +27,9 @@ public class ArticleService {
                         request.getBoardId(),
                         request.getWriterId())
         );
+        Long generatedId = snowflake.nextId();
+        System.out.println("Generated ID: " + generatedId);
+
 
         return ArticleResponse.from(article);
     }
